@@ -17,16 +17,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+   MyHomePage({super.key});
 
-
-  final String title;
+  String _currentFortune = "";
+  
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -34,6 +34,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
+  final _fortuneList = [
+    "You will find happiness with a new love.",
+    "You will have a great day today.",
+    "You will have a great day tomorrow.",
+    "You will have a great day the day after tomorrow.",
+    "You will have a great day the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after the day after the day after tomorrow.",
+  ];
 
   void _incrementCounter() {
     setState(() {
@@ -50,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         
-        title: Text(widget.title),
+        title: Text("Fortune Cookie"),
       ),
       body: Center(
       
@@ -58,11 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
           
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+             Text(
+              "Your Fortune is:",
             ),
             Text(
-              '$_counter',
+              '${_fortuneList[_counter % _fortuneList.length]}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
