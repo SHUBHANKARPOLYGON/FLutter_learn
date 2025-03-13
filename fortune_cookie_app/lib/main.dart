@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; // Construction in UI
+import 'dart:math'; // Construction of Logic in Application // Library that generates that random Values
 
 void main() {
   runApp(const MyApp());
@@ -13,27 +14,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-       
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-   MyHomePage({super.key});
+  MyHomePage({super.key});
 
-  String _currentFortune = "";
-  
+  String _currentFortune = "1";
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  String _currentFortune = "";
 
   final _fortuneList = [
     "You will find happiness with a new love.",
@@ -41,49 +40,81 @@ class _MyHomePageState extends State<MyHomePage> {
     "You will have a great day tomorrow.",
     "You will have a great day the day after tomorrow.",
     "You will have a great day the day after the day after tomorrow.",
-    "You will have a great day the day after the day after the day after tomorrow.",
     "You will have a great day the day after the day after the day after the day after tomorrow.",
     "You will have a great day the day after the day after the day after the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after the day after the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after the day after the day after the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after the day after the day after the day after the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after the day after the day after the day after the day after the day after the day after tomorrow.",
+    "You will have a great day the day after the day after the day after the day after the day after the day after the day after the day after the day after the day after tomorrow.",
+    "You will have a great day",
   ];
 
-  void _incrementCounter() {
+  void _randomFortune() {
+    var random = Random();
+    int fortune = random.nextInt(_fortuneList.length);
     setState(() {
-     
-      _counter++;
+      _currentFortune = _fortuneList[fortune];
+      print("New Fortune==>: $_currentFortune");
     });
   }
 
   @override
   Widget build(BuildContext context) {
-   
+    print("Building the Widget");
     return Scaffold(
-      appBar: AppBar(
-        
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        
-        title: Text("Fortune Cookie"),
-      ),
+      appBar: AppBar(),
       body: Center(
-      
         child: Column(
-          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-             Text(
+            Image.asset(
+              'assets/images/fortune_cookie.png',
+              width: 200,
+              height: 200,
+              fit: BoxFit.cover,
+            ),
+
+            const Text(
+              "Your Fortune Teller",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            const Text(
               "Your Fortune is:",
+              style: TextStyle(
+                fontSize: 19,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            Text(
-              '${_fortuneList[_counter % _fortuneList.length]}',
-              style: Theme.of(context).textTheme.headlineMedium,
+
+            const SizedBox(height: 20),
+            FloatingActionButton.extended(
+              onPressed: _randomFortune,
+              label: const Text('Get Fortune'),
+            ), // FloatingActionButton
+            Card(
+              // Main Widget
+              child: Padding(
+                // Child Widget of Main Widget
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  // Child Widget of Padding
+                  _currentFortune,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+              ),
             ),
+
+            ElevatedButton(
+                onPressed: _randomFortune,
+                child: const Text('My Fortune')), // ElevatedButton
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
