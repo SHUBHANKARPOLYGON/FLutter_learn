@@ -1,3 +1,5 @@
+// This is the main page of the app. It will be used to display the U-Tip app's main content.
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,4 +25,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Created Stateful Widget Next by writing stl
+class UTip extends StatefulWidget {
+  const UTip({super.key});
+
+  @override
+  State<UTip> createState() => _UTipState();
+}
+
+class _UTipState extends State<UTip> { 
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
 
