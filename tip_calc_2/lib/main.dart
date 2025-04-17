@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         
       ),
-      home: null,
+      home: UTip(), // Set the home to the U-Tip widget
     );
   }
 }
