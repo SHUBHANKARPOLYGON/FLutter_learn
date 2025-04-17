@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         
       ),
-      home: const UTip(), // Set the home to the U-Tip widget
+      home: const UTip() // Set the home to the U-Tip widget
     );
   }
 }
@@ -36,7 +36,7 @@ class UTip extends StatefulWidget {
 class _UTipState extends State<UTip> { 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(); //placeholder with create black screen 
   }
 }
 
