@@ -36,7 +36,7 @@ class UTip extends StatefulWidget {
 class _UTipState extends State<UTip> { 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('U-Tip'), //title of the app bar
       ),
