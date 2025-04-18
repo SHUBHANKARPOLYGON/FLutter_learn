@@ -38,7 +38,7 @@ class _UTipState extends State<UTip> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('U-Tip'), //title of the app bar
+        title: const Text('U-Tip'), //title of the app bar
       ),
     ); //placeholder with create black screen 
   }
