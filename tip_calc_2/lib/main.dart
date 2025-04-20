@@ -39,8 +39,9 @@ class _UTipState extends State<UTip> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('U-Tip'), //title of the app bar
-        leading: Text("Hello"),
+        // leading: Text("Hello"),
       ),
+      body: Text("Hello World"), //body of the app
     ); //placeholder with create black screen 
   }
 }
