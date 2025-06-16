@@ -44,6 +44,7 @@ class _UTipState extends State<UTip> {
         // leading: Text("Hello"),
       ),
       body: Text("Hello World"), //body of the app
+      // backgroundColor: Colors.red, //background color of the app
     ); //placeholder with create black screen 
   }
 }
