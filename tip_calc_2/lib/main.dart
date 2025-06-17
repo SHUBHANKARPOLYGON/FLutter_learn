@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp());  //Const used to improve the performance of the app by making it immutable.
 }
 
 class MyApp extends StatelessWidget {
