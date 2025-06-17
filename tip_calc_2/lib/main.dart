@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 
 // Created Stateful Widget Next by writing stl
 class UTip extends StatefulWidget {
-  const UTip({super.key});
+  const UTip({super.key}); // This is the constructor for the UTip widget. It allows you to pass key parameters to the widget.
 
   @override
   State<UTip> createState() => _UTipState();
