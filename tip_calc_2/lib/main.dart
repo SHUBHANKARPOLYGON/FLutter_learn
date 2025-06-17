@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// This is the main widget of the app. It will be used to display the U-Tip app's main content.
 // Created Stateful Widget Next by writing stl
 class UTip extends StatefulWidget {
   const UTip({super.key}); // This is the constructor for the UTip widget. It allows you to pass key parameters to the widget.
@@ -38,6 +39,7 @@ class _UTipState extends State<UTip> {
   @override
   Widget build(BuildContext context) {
     // return const Placeholder();  // This tag will create a black screen with a placeholder widget and create cross axis alignment
+    // return const Scaffold();  // Scaffold is a widget that provides a structure for the app's UI, including an app bar, body, and other elements. and create complete white screen
     return Scaffold(
       appBar: AppBar(
         title: const Text('U-Tip'), //title of the app bar
