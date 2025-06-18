@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         
       ),
-      home: const UTip() // Set the home to the U-Tip widget
+      home: const UTip(), // Set the home to the U-Tip widget
     );
   }
 }
