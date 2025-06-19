@@ -45,7 +45,8 @@ class _UTipState extends State<UTip> {
         title: const Text('U-Tip'), //title of the app bar
         // leading: Text("Hello"),
       ),
-      body: Column(
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.center, //aligns the children in the center of the column
         children: [
           const Text("Hello World"),
         ],
