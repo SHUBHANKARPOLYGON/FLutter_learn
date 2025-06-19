@@ -45,7 +45,11 @@ class _UTipState extends State<UTip> {
         title: const Text('U-Tip'), //title of the app bar
         // leading: Text("Hello"),
       ),
-      body: Text("Hello World"), //body of the app
+      body: Column(
+        children: [
+          const Text("Hello World"),
+        ],
+      ), //body of the app
       // backgroundColor: Colors.red, //background color of the app
     ); //placeholder with create black screen 
   }
