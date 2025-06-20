@@ -46,7 +46,8 @@ class _UTipState extends State<UTip> {
         // leading: Text("Hello"),
       ),
       body: const Column(
-        mainAxisAlignment: MainAxisAlignment.center, //aligns the children in the center of the column
+        // mainAxisAlignment: MainAxisAlignment.center, //aligns the children in the center of the column
+        
         children: [
           const Text("Hello World"),
         ],
