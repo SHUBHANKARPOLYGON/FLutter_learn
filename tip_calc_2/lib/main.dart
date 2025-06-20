@@ -40,16 +40,22 @@ class _UTipState extends State<UTip> {
   Widget build(BuildContext context) {
     // return const Placeholder();  // This tag will create a black screen with a placeholder widget and create cross axis alignment
     // return const Scaffold();  // Scaffold is a widget that provides a structure for the app's UI, including an app bar, body, and other elements. and create complete white screen
+    
+    // 1st Navbar section with Toggle Button
     return Scaffold(
       appBar: AppBar(
         title: const Text('U-Tip'), //title of the app bar
         // leading: Text("Hello"),
       ),
-      body: const Column(
+
+    // 2nd Total Per Person section 
+      body: Column(
         // mainAxisAlignment: MainAxisAlignment.center, //aligns the children in the center of the column
-        
+
         children: [
-          const Text("Hello World"),
+          Container(
+            
+            child: const Text("Total Per Person")),
         ],
       ), //body of the app
       // backgroundColor: Colors.red, //background color of the app
