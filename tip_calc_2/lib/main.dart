@@ -54,7 +54,7 @@ class _UTipState extends State<UTip> {
 
         children: [
           Container(
-            
+            decoration:(), //For starting a decoration of your container
             child: const Text("Total Per Person")),
         ],
       ), //body of the app
