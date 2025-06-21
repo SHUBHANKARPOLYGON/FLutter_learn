@@ -1,6 +1,7 @@
 // This is the main page of the app. It will be used to display the U-Tip app's main content.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());  //Const used to improve the performance of the app by making it immutable.
@@ -54,7 +55,7 @@ class _UTipState extends State<UTip> {
 
         children: [
           Container(
-            decoration:(), //For starting a decoration of your container
+            decoration: BoxDecoration(),
             child: const Text("Total Per Person")),
         ],
       ), //body of the app
