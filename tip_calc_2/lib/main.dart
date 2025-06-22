@@ -59,6 +59,7 @@ class _UTipState extends State<UTip> {
               color: Colors.deepPurpleAccent, //background color of the container
               borderRadius: BorderRadius.circular(10), //rounds the corners of the container
             ),
+            padding: const EdgeInsets.all(20), //adds padding around the container
             child: const Text("Total Per Person")),
         ],
       ), //body of the app
